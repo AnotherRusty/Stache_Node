@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*Customize Switch Button*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-width: 2px;
+  border-color: black;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.react-responsive-modal-modal {
+  border-radius: 10px !important;
+}
+.react-responsive-modal-closeButton {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+  border-radius: 5px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #757575;
+}
